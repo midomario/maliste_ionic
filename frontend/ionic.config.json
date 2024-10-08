@@ -1,0 +1,7 @@
+{
+  "name": "maliste",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

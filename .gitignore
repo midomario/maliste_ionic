@@ -1,0 +1,41 @@
+# Node.js / Express (Backend)
+node_modules/
+npm-debug.log
+package-lock.json
+.env
+
+# Build directories
+dist/
+build/
+coverage/
+*.tgz
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ionic / Angular (Frontend)
+node_modules/
+www/
+dist/
+package-lock.json
+*.log
+*.tmp
+
+# Angular CLI generated files
+.angular/
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Environment files
+.env

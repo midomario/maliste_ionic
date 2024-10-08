@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title color="light">
+      Ma liste
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-list [inset]="true" class="maliste">
+      @for (item of items$ ; track item.id) {
+      <app-item [item]="item"></app-item>
+      }
+    </ion-list>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="add-fab">
+    <ion-fab-button (click)="toggleAddItem = true" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+<ion-modal id="modal" [isOpen]="toggleAddItem" (willDismiss)="closeAddModal()" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5, 1]">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <!-- <ion-title>Ajouter un élément</ion-title> -->
+        <ion-buttons slot="end">
+          <ion-button (click)="closeAddModal()">
+            <ion-icon name="close-circle" color="danger" size="large"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+      <div class="container">
+        <div class="input">
+        <ion-input
+          type="text"
+          placeholder="nom de l'élement ..."
+          [(ngModel)]="name"
+        ></ion-input>
+      </div>
+        <ion-button color="primary" (click)="save()" 
+        [disabled]="name == '' || name == undefined" shape="round">
+          <ion-icon slot="start" name="save"></ion-icon>
+          <ion-label>Ajouter</ion-label>
+      </ion-button>
+    </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+</ion-content>
+
