@@ -8,4 +8,4 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "8100:8100"
+      - "4200:4200"

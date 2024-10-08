@@ -3,7 +3,7 @@
 - Ce projet est réalisé avec Ionic/Angular
 - Pour voir une expérience optimale, c'est suggéré de mettre le navigateur en mode mobile
 
-## 1 - cloner le repo & installer les packages
+## cloner le repo
 
 ```bash
 git clone https://github.com/midomario/maliste_ionic.git
@@ -13,27 +13,25 @@ git clone https://github.com/midomario/maliste_ionic.git
 cd maliste_ionic
 ```
 
+## 1 - installer les packages et démarrer les services (Local)
+
 ```bash
-cd frontend
+cd frontend && npm i
 ```
 
 ```bash
-npm i
+ionic serve --open
 ```
 
 ```bash
-cd ../backend
+cd ../backend && npm i
 ```
 
 ```bash
-npm i
+node server.js
 ```
 
-```bash
-cd ..
-```
-
-## 2 - Exécuter cette commande pour construire et démarrer les conteneurs :
+## 2 - Exécuter cette commande pour construire et démarrer les conteneurs (DOCKER) :
 
 - ### démarrer
 
@@ -42,7 +40,7 @@ docker-compose up --build
 ```
 
 - ### accès frontend :
-  > http://localhost:8100
+  > http://localhost:4200
 - ### accès backend :
 
   > http://localhost:3000/api/items
