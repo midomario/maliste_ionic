@@ -42,7 +42,7 @@ docker-compose up --build
 ```
 
 - ### accès frontend :
-  > http://localhost (ou bien http://localhost:80)
+  > http://localhost:8100
 - ### accès backend :
 
   > http://localhost:3000/api/items
