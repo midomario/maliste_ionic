@@ -4,7 +4,7 @@
 ## 1 - cloner le repo & installer les packages
  
  ```bash
- git clone https://github.com/midomario/test_ionic_maliste.git
+ git clone https://github.com/midomario/maliste_ionic.git
  ```
  
  ```bash
